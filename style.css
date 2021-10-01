@@ -87,8 +87,11 @@
 }
 
 
-.ex-10-icon {
+.ex-11-icon, .ex-10-icon {
     font-size: 60px;
+}
+
+.ex-10-icon {
     animation-name: rotate10;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -103,19 +106,21 @@
     }
 }
 
-
-.ex-11-icon {
-    font-size: 60px;
-    animation-name: rotate10;
+.ex-11-icon:hover{
+    animation-name: rotate11;
     animation-duration: 2s;
-    animation-timing-function: linear;
 }
-
-.ex-11-icon
-
-
-
-
+@keyframes rotate11{
+    0%{
+        transform: rotate(0deg);
+    }
+    90%{
+        transform: rotate(310deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 
 
 .ex-12-button, .ex-13-button {
@@ -131,6 +136,42 @@
     text-align: center;
     text-decoration: none;
 }
+
+.ex-12-button:hover .ex-12-top-white{
+   animation: move12top 2s linear;
+}
+@keyframes move12top{
+    0%{
+        left: 10%;
+    }
+    50%{
+        left: calc(100% - 60px);
+    }
+    100%{
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: move12bot 2s linear;
+ }
+ @keyframes move12bot{
+     0%{
+         right: 20%;
+     }
+     50%{
+         right: calc(100% - 60px);
+     }
+     100%{
+         right: 20%;
+     }
+ }
+
+
+
+
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -139,6 +180,7 @@
     width: 60px;
     height: 20px;
 }
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
